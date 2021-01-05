@@ -39,7 +39,7 @@
         "log-analytics-template": "[uri(deployment().properties.templateLink.uri, 'nestedtemplates/azuredeploy-log-analytics.json')]",
         "powershell-function-template": "[uri(deployment().properties.templateLink.uri, 'nestedtemplates/azuredeploy-powershell-function.json')]",
         "alertQuery": "[concat('AppRequests\n| where TimeGenerated > ago(10m) \n| where Name == ''github-ado-sync''\n| where Success == false')]",
-        "functionSourceRepo": "https://github.com/neilpeterson/github-ado-sync.git",
+        "functionSourceRepo": "https://github.com/mspnp/github-ado-sync.git",
         "kay-vault-name": "[concat('kv',variables('uniqueName'), 'kv')]",
         "location": "[resourceGroup().location]",
         "uniqueName": "[uniqueString(subscription().subscriptionId, resourceGroup().id)]"
